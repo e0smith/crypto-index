@@ -4,5 +4,4 @@ Flatiron School Ruby CLI Phase 1 Final Project
 
 ## API
 
-CoinLore 
-API - https://www.coinlore.com/cryptocurrency-data-api
+Pokemon - https://pokeapi.co/api/v2/pokemon?limit=151

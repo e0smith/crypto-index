@@ -1,4 +1,0 @@
-class CURRENCY::Crpyto
-
-
-end

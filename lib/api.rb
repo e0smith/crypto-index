@@ -1,3 +1,3 @@
-class CUURENCY::API
+class POKE::API
 
 end

@@ -1,3 +1,3 @@
-class CURRENCY::CLI
+class POKE::CLI
 
 end
