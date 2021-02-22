@@ -1,0 +1,3 @@
+class CUURENCY::API
+
+end

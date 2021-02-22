@@ -1,0 +1,3 @@
+class CURRENCY::CLI
+
+end
