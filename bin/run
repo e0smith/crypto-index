@@ -7,4 +7,4 @@ POKE::CLI.new.run
 POKE::API.new
 
 POKE::API.info
-bindng.pry
+# binding.pry

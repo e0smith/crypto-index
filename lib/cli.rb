@@ -3,6 +3,7 @@ class POKE::CLI
     def run
         # loading        #DISABLE FOR TESTING
         greeting
+        # POKE::API.new.build_pokemon()
     end
 
     def loading
