@@ -4,4 +4,7 @@
 require_relative "../config/enviorment"
 
 POKE::CLI.new.run
-POKE::API.new.pokemon_array
+POKE::API.new
+
+POKE::API.info
+bindng.pry
