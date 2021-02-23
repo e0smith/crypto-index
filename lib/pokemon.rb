@@ -1,4 +1,3 @@
 class POKE::Pokemon
 
-
 end
