@@ -3,3 +3,4 @@
 
 require_relative "../config/enviorment"
 
+POKE::CLI.new.run
