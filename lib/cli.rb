@@ -1,7 +1,7 @@
 class POKE::CLI
     #inputs go here
     def run
-        loading
+        # loading        #DISABLE FOR TESTING
         greeting
     end
 

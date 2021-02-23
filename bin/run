@@ -4,3 +4,4 @@
 require_relative "../config/enviorment"
 
 POKE::CLI.new.run
+POKE::API.new.pokemon_array
