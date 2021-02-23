@@ -1,4 +1,4 @@
-# crypto-index
+#  Pokedex
 Flatiron School Ruby CLI Phase 1 Final Project
 
 
