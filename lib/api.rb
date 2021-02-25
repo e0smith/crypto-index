@@ -1,26 +1,42 @@
-#stores data from api
-
 class POKE::API
 
-    
-    def self.info
-        url = "https://pokeapi.co/api/v2/pokemon?limit=151"
+    def self.fetch_pokemon
+        url = "https://pokeapi.co/api/v2/pokemon?limit=5"
         response = HTTParty.get(url)
-        response["results"].each do |x|
-            HTTParty.get(x["url"])
-            binding.pry
-        end
-            # = response["ability"]
-        # self.build_pokemon(ability_array)
-
-        #  binding.pry
+        fetch_abilities(response["results"])
     end
 
-    # def build_pokemon(ability_array)
-    #     ability_array.each do |pokemon_hash|
-    #         Pokemon.new(pokemon_hash)
-    #     binding.pry
-    #     end
+    def self.fetch_abilities(results)
+        results.each do |x|
+            response = HTTParty.get(x["url"])
+            self.build_pokemon(x["name"], response)
+         binding.pry
+        end
+    end
+    def self.build_pokemon(name, abilities)
+        POKE::Pokemon.new(name, abilities)
+    end
+end
+
+
+
+
+
+
+
+
+
+
+ # def ability_desc
     # end
 
-end
+# response["results"].each do |x|
+# data_array = HTTParty.get(x["url"])
+# self.build_pokemon(data_array)
+# binding.pry
+
+        # data_array.each do |data_hash|
+        #     # binding.pry
+        #     POKE::Pokemon.new(data_hash)
+            
+        # end

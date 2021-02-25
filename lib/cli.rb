@@ -1,9 +1,8 @@
 class POKE::CLI
-    #inputs go here
     def run
         # loading        #DISABLE FOR TESTING
-        greeting
-        # POKE::API.new.build_pokemon()
+        # greeting
+        POKE::API.build_pokemon()
     end
 
     def loading
@@ -25,4 +24,3 @@ class POKE::CLI
     end
     
 end
- 
