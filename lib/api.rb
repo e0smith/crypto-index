@@ -4,18 +4,21 @@ class POKE::API
         url = "https://pokeapi.co/api/v2/pokemon?limit=5"
         response = HTTParty.get(url)
         fetch_abilities(response["results"])
+        # binding.pry
     end
 
     def self.fetch_abilities(results)
         results.each do |x|
             response = HTTParty.get(x["url"])
-            self.build_pokemon(x["name"], response)
-         binding.pry
+            # binding.pry
+            POKE::Pokemon.new(response)
+            # self.build_pokemon(x["name"], response)
+        #  binding.pry
         end
     end
-    def self.build_pokemon(name, abilities)
-        POKE::Pokemon.new(name, abilities)
-    end
+#     def self.build_pokemon
+#         POKE::Pokemon.new(results)
+#     end
 end
 
 
