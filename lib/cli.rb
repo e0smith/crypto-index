@@ -19,28 +19,6 @@ class POKE::CLI
             sleep(1.0/90.0) 
         end
     end
-
-    def list
-        @names = POKE::Pokemon.first_generation.map {|poke| poke.name} 
-        @names.each.with_index(1) do |name, index| #lists pokemon numerically 
-            puts "#{index}. #{name}"
-        end
-        puts "-----------------------------------------------------------------------------------------"
-        puts "Please select the associated number for the Pokemon you would like to learn more about..."
-        puts "-----------------------------------------------------------------------------------------"
-        number = input.to_i - 1
-        a = POKE::Pokemon.find_pokemon(@names[number]) #selects pokemon by number
-        if number >= 0 && number <= POKE::Pokemon.first_generation.count - 1
-            a = POKE::Pokemon.find_pokemon(@names[number])
-            puts "NAME - #{a.name.capitalize}"
-            puts "ABILITIE(S) - #{a.abilities.join(", ")}"
-            puts "TYPE(S) - #{a.type.join(", ")}"
-            menu
-        else
-            puts "invalid entry"
-         menu
-        end
-    end
         
     def input
         x = gets.chomp
@@ -53,14 +31,14 @@ class POKE::CLI
         sleep(1)
     end
 
-    def menu
-        puts "--------------------------------------------------------------------"
-        puts "Enter 'new' to see a new pokemon or type 'exit' to close the program"
-        puts "--------------------------------------------------------------------"
-        user_input = input
-        if user_input == "new" || user_input == "NEW"
-            puts "Please enter a new number"
-            number = input.to_i - 1
+    def selecttion_printout
+        puts "-----------------------------------------------------------------------------------------"
+        puts "Please select the associated number for the Pokemon you would like to learn more about..."
+        puts "-----------------------------------------------------------------------------------------"
+    end
+
+    def input_response
+        number = input.to_i - 1
             if number >= 0 && number <= POKE::Pokemon.first_generation.count - 1
                 a = POKE::Pokemon.find_pokemon(@names[number])
                 puts "NAME - #{a.name.capitalize}"
@@ -69,8 +47,27 @@ class POKE::CLI
                 menu
             else
                 puts "invalid entry"
+                menu
             end
-            menu
+    end
+
+    def list
+        @names = POKE::Pokemon.first_generation.map {|poke| poke.name} 
+        @names.each.with_index(1) do |name, index| #lists pokemon numerically 
+            puts "#{index}. #{name}"
+        end
+        selecttion_printout
+        input_response
+    end
+
+    def menu
+        puts "--------------------------------------------------------------------"
+        puts "Enter 'new' to see a new pokemon or type 'exit' to close the program"
+        puts "--------------------------------------------------------------------"
+        user_input = input
+        if user_input == "new" || user_input == "NEW"
+            selecttion_printout
+            input_response
         elsif user_input == "exit"
             puts"            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" 
             puts "            ⣿⣿⣿⣿⣿⡏⠉⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿

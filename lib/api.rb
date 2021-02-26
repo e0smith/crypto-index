@@ -1,7 +1,7 @@
 class POKE::API
 
     def self.fetch_pokemon
-        url = "https://pokeapi.co/api/v2/pokemon?limit=20"
+        url = "https://pokeapi.co/api/v2/pokemon?limit=151"
         response = HTTParty.get(url) 
         fetch_abilities(response["results"])
     end
