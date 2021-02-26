@@ -6,7 +6,7 @@ require_relative "../config/enviorment"
 # POKE::CLI.new.run
 POKE::API.fetch_pokemon
 POKE::Pokemon.first_generation
-POKE::CLI.new.list
+POKE::CLI.new.run
 
 # POKE::API.fetch_pokemon
 # POKE::Pokemon.first_generation

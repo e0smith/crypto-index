@@ -1,17 +1,21 @@
 class POKE::API
 
     def self.fetch_pokemon
-        url = "https://pokeapi.co/api/v2/pokemon?limit=5"
-        response = HTTParty.get(url)
+        url = "https://pokeapi.co/api/v2/pokemon?limit=20"
+        response = HTTParty.get(url) 
         fetch_abilities(response["results"])
-        # binding.pry
     end
 
     def self.fetch_abilities(results)
         results.each do |x|
             response = HTTParty.get(x["url"])
             # binding.pry
-            POKE::Pokemon.new(response)
+            #ABILITY DO LATER
+            # response["abilities"].each do |x|
+            #     ability = HTTParty.get(x["ability"]["url"])
+            #     binding.pry
+            # end
+            POKE::Pokemon.new(response) #creates new pokemon object
             # self.build_pokemon(x["name"], response)
         #  binding.pry
         end
@@ -20,6 +24,25 @@ class POKE::API
 #         POKE::Pokemon.new(results)
 #     end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
