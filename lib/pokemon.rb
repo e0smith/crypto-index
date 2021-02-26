@@ -1,6 +1,6 @@
 class POKE::Pokemon
-
     attr_accessor :name
+    
    @@first_generation = []
 
     def initialize(response)
@@ -12,7 +12,6 @@ class POKE::Pokemon
     @abilities = response["abilities"]
     @type = response["types"]
     @@first_generation << self
-    # binding.pry
 end
 
     def abilities
