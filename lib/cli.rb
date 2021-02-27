@@ -9,7 +9,7 @@ class POKE::CLI
 
     def loading
         puts "----------------------------------------------------"
-        puts "---------------Loading up the PokeDex---------------"
+        puts "---------------Loading up the Pokédex---------------"
         puts "----------------------------------------------------"
         sleep(2)
         num = 0
@@ -26,14 +26,14 @@ class POKE::CLI
 
     def greeting
         puts "--------------------------"
-        puts "Welcome to the Pokemon API"
+        puts "Welcome to the Pokémon API"
         puts "--------------------------"
         sleep(1)
     end
 
     def selecttion_printout
         puts "-----------------------------------------------------------------------------------------"
-        puts "Please select the associated number for the Pokemon you would like to learn more about..."
+        puts "Please select the associated number for the Pokémon you would like to learn more about..."
         puts "-----------------------------------------------------------------------------------------"
     end
 
@@ -62,7 +62,7 @@ class POKE::CLI
 
     def menu
         puts "--------------------------------------------------------------------"
-        puts "Enter 'new' to see a new pokemon or type 'exit' to close the program"
+        puts "Enter 'new' to see a new Pokémon or type 'exit' to close the program"
         puts "--------------------------------------------------------------------"
         user_input = input
         if user_input == "new" || user_input == "NEW"
