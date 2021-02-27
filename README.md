@@ -9,9 +9,17 @@
    
    Create a CLI that goes atleast one level deep into a piece of information
 
-### API used for project
+## API used for project
 
-   pokeapi - https://pokeapi.co/api/v2/pokemon?limit=151
+   pokeapi - https://pokeapi.co/
+   
+## Project function
+   
+   The Pokédex CLI project takes in data from the pokeapi and stores it to a class variable which
+   is used to create pokemon objects. The Pokédex allows the user to see the ability(s), name and 
+   type(s) to a specified Pokémon. This Pokédex includes the original 151 Pokémon from the first
+   generation (which can be modified to include a specified number by changing the 'limit=' in the
+   API class url).
 
 ## How to use the program
 
@@ -30,3 +38,4 @@
 5. Once you are done viewing the information about your Pokémon, type 'new' to select another Pokémon
 
 6. If you would like to exit the program, type 'exit'
+
