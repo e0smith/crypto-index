@@ -15,8 +15,8 @@
    
 ## Project function
    
-   The Pokédex CLI project takes in data from the pokeapi and stores it to a class variable which
-   is used to create pokemon objects. The Pokédex allows the user to see the ability(s), name and 
+   The Pokédex CLI project takes in data from the pokeapi and stores Pokémon objects created from 
+   that data into a class variable. The Pokédex allows the user to see the ability(s), name and 
    type(s) to a specified Pokémon. This Pokédex includes the original 151 Pokémon from the first
    generation (which can be modified to include a specified number by changing the 'limit=' in the
    API class url).
