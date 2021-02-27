@@ -1,15 +1,17 @@
 #  Pokédex CLI Project
-    Flatiron School Ruby CLI Phase 1 Final Project
+   Flatiron School Ruby CLI Phase 1 Final Project
 
 ## Objective
 
-    Create a CLI using data from an external source (API)
+   Create a CLI using data from an external source (API)
 
-    Use OOP and reduce repetative code
+   Use OOP and reduce repetative code
+   
+   Create a CLI that goes atleast one level deep into a piece of information
 
 ### API used for project
 
-    pokeapi - https://pokeapi.co/api/v2/pokemon?limit=151
+   pokeapi - https://pokeapi.co/api/v2/pokemon?limit=151
 
 ## How to use the program
 
